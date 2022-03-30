@@ -7,15 +7,10 @@ import java.util.List;
 public class Vorstellung {
 
     private final KinoSaal saal;
-
     private final Zeitfenster zeitfenster;
-
     private final LocalDate datum;
-
     private final String film;
-
     private final float preis;
-
     private final List<Ticket> tickets = new LinkedList<>();
 
     public Vorstellung(KinoSaal saal, Zeitfenster zeitfenster, LocalDate datum, String film, float preis) {
@@ -63,7 +58,8 @@ public class Vorstellung {
             return false;
         }
         Vorstellung otherV = (Vorstellung) obj;
-        return saal.equals(otherV.getSaal()) && zeitfenster == otherV.getZeitfenster() && datum.isEqual(otherV.getDatum());
+        return saal.equals(otherV.getSaal()) && zeitfenster == otherV.getZeitfenster()
+                && datum.isEqual(otherV.getDatum());
     }
 
 }
